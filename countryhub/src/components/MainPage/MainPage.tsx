@@ -51,18 +51,22 @@ const MainPage = () => {
 
 
             
-            <Link to={`/${country.name.common}`}>
+            <Link to={`/${country.name.common}`} style={{textDecoration:'none',color:'black'}}>
             
             <div key={index} className="country-list-item">
             <img className='country-image' src={country.flags.png}/>
-            <p>{country.name.common}</p>
+            <div className='country-item-texts'>
+            <p className='title-text'>{country.name.common}</p>
             <div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
                 <img style={{width:'24px', height:'24px'}} src={population} alt="" />
                 <p>{country.population}</p>
             </div>
             <div style={{display:'flex',justifyContent:'space-between'}}>
-                <img src={money} alt="" />
+                <img style={{width:'24px', height:'24px'}} src={money} alt="" />
+                <p>{(country.currencies != null ? Object.values(country.currencies)[0].symbol : ' ')}</p>
             </div>
+            </div>
+            
             </div>
             
             

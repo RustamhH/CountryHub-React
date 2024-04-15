@@ -7,8 +7,8 @@ const CountryInfo = () => {
     return (
       <div>
         <Header></Header>
-        <button className='backbutton' onClick={() => navigate("/")}>Back</button>
         <main>COUNTRY INFO</main>
+        <button className='backbutton' onClick={() => navigate("/")}>Back</button>
         <Footer></Footer>
       </div>
     );
