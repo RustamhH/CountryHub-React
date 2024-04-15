@@ -1,5 +1,5 @@
-import logo from "../assets/logo.png"; // Import the logo.png file
-import hamburger from "../assets/hamburgermenu.png"; // Import the logo.png file
+import logo from "../assets/logo.png";
+import hamburger from "../assets/hamburgermenu.png";
 
 const Header = () => {
   return (

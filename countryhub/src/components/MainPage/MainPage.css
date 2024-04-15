@@ -1,7 +1,6 @@
 .country-list {
   display: flex;
   gap: 97px;
-  margin-top: 140px;
   overflow-x: hidden;
   flex-wrap: wrap;
   align-items: center;
@@ -31,6 +30,8 @@ p {
 }
 
 .title-text {
+  width: 320px;
   font-size: 25px;
   margin-top: 20px;
 }
+

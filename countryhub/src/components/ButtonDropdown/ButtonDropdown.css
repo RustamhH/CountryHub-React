@@ -4,5 +4,10 @@
 
 .searchButton {
   border-radius: 12px;
+  background-color: #50B700B2;
+  color: white;
+  border: none;
+  box-shadow: 0px 1px 4px 3px #00000040;
+  width: 103px;
   
 }

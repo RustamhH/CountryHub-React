@@ -6,7 +6,7 @@ import './ButtonDropdown.css'
 
 const ButtonDropdown = () => {
 
-  const [selectedCategory, setSelectedCategory] = useState('Categories');
+  const [selectedCategory, setSelectedCategory] = useState('Name');
 
   const handleDropdownItemClick = (category) => {
     setSelectedCategory(category);
@@ -17,12 +17,12 @@ const ButtonDropdown = () => {
   };
 
   return (
-    <div style={{ display: 'flex', gap: '45px', alignItems: 'center', marginTop: '70px', justifyContent: 'center' }}>
-      <div className="input-group">
+    <div style={{ display: 'flex', gap: '45px', marginTop: '70px', justifyContent: 'center',marginBottom:'140px'}}>
+      <div className="input-group" style={{boxShadow:'1px 1px 15px 0px #00000033',borderRadius:'0px 21px 21px 0px'}}>
         <input type="text" className="form-control" aria-label="Text input with dropdown button" />
         <div className="input-group-append">
-          <Dropdown>
-            <Dropdown.Toggle variant="outline-secondary" id="dropdown-basic">
+          <Dropdown style={{backgroundColor:'#149CFF',borderRadius:'0px 21px 21px 0px'}}>
+            <Dropdown.Toggle style={{color:'white',border:'none'}} variant="outline-secondary" id="dropdown-basic">
               {selectedCategory}
             </Dropdown.Toggle>
             <Dropdown.Menu>
