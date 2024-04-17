@@ -51,7 +51,28 @@ const MainPage = () => {
 
 
             
-            <Link to={`/${country.name.common}`} style={{textDecoration:'none',color:'black'}}>
+            <Link to={`/${country.name.common}`} style={{textDecoration:'none',color:'black'}}
+            state={{
+
+            commonName:country.name.common,
+            officialName:country.name.official,
+            capital:country.capital,
+            region:country.region,
+            subregion:country.subregion,
+            population:country.population,
+            flag:country.flags.png,
+            coatOfArms:country.coatOfArms.png,
+
+
+            
+            
+            commonNativeName:(country.name.nativeName != null ? Object.values(country.name.nativeName)[0].common : ' '),
+            officialNativeName:(country.name.nativeName != null ? Object.values(country.name.nativeName)[0].official : ' '),
+
+            currencyName:(country.currencies != null ? Object.values(country.currencies)[0].name : ' '),
+            currencySymbol:(country.currencies != null ? Object.values(country.currencies)[0].symbol : ' '),
+
+            }}>
             
             <div key={index} className="country-list-item">
             <img className='country-image' src={country.flags.png}/>

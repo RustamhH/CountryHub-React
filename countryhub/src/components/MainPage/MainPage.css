@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding-bottom: 50px;
 }
   
   
@@ -14,7 +15,7 @@
   padding: 13px;
   padding-top: 0px;
   box-shadow: 0px 1px 15px 0px #00000040;
-  border-radius: 12px 12px 0px 0px;
+  border-radius: 12px;
 }
   
   

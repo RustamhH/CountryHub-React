@@ -1,0 +1,39 @@
+.left-section {
+    width: 1550px;
+    padding-top:38px;
+    padding-left: 159px;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 88px;
+    align-items: center;
+    padding-top:38px;
+    padding-right: 28px;
+}
+
+.coatimage {
+    width: 240px;
+}
+
+
+.text-row {
+    display: flex;
+    gap: 65px;
+    align-items: center;
+
+}
+
+.big-title {
+    color: #585858;
+    font-size: 15px;
+}
+.small-title {
+    color: #585858;
+    font-size: 10px;
+}
+
+.prop {
+    font-size: 40px;
+}
