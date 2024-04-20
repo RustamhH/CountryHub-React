@@ -3,7 +3,7 @@ import React from 'react'
 const ErrorElement = () => {
     
   return (
-    <div>
+    <div style={{textAlign:'center'}}>
         <h1>
             404
         </h1>

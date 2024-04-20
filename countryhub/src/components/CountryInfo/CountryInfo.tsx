@@ -1,6 +1,7 @@
 import Footer from "../Footer";
 import Header from "../Header";
 import { useNavigate,useLocation } from "react-router-dom";
+import maplogo from "../../assets/maplogo.png"
 import './CountryInfo.css'
 
 const CountryInfo = () => {
@@ -12,7 +13,7 @@ const CountryInfo = () => {
         <div style={{display:'flex'}}>
 
 
-          <button className='searchButton' onClick={() => navigate("/")}>Back</button>
+          {/* <button style={{height:'40px'}} className='searchButton' onClick={() => navigate("/")}>Back</button> */}
           <div className="left-section">
             <p className="big-title">Names:</p>
             
@@ -79,6 +80,7 @@ const CountryInfo = () => {
           <div className="right-section">
             <img src={state.flag} alt="" />
             <img className="coatimage" src={state.coatOfArms} alt="" />
+            <a href={state.map}><img src={maplogo} alt="" /></a>
           </div>
 
 

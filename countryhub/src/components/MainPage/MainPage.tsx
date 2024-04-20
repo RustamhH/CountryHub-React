@@ -6,6 +6,7 @@ import money from "../../assets/moneylogo.png";
 import population from "../../assets/populationlogo.png";
 import './MainPage.css'
 import ButtonDropdown from '../ButtonDropdown/ButtonDropdown';
+import ErrorElement from '../ErrorElement';
 
 const MainPage = () => {
   
@@ -23,7 +24,7 @@ const MainPage = () => {
   }
   
   if (error) {
-    return <div>Error: {error}</div>;
+    return <ErrorElement></ErrorElement>;
   }
 
   return (
@@ -62,6 +63,7 @@ const MainPage = () => {
             population:country.population,
             flag:country.flags.png,
             coatOfArms:country.coatOfArms.png,
+            map:country.maps.openStreetMaps,
 
 
             

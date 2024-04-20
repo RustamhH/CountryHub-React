@@ -6,14 +6,14 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 interface IFetchReducer {
   list: object[],
   isLoading: boolean,
-  error: string
+  error: boolean
 }
 
 
 const initialState: IFetchReducer = {
   list: [],
   isLoading: false,
-  error: ''
+  error: false
 }
 
 export const FetchSlice = createSlice({
@@ -26,10 +26,11 @@ export const FetchSlice = createSlice({
     Success: (state, action: PayloadAction<object[]>) => {
       state.list = action.payload;
       state.isLoading = false;
-      state.error = '';
+      state.error = false;
     },
-    Error: (state, action: PayloadAction<string>) => {
-      state.error = action.payload
+    Error: (state) => {
+      state.isLoading=false
+      state.error = true
     }
   }
 })
