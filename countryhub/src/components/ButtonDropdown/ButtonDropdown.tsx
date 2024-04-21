@@ -29,9 +29,9 @@ const ButtonDropdown = () => {
   };
 
   return (
-    <div style={{ display: 'flex', gap: '45px', marginTop: '70px', justifyContent: 'center',marginBottom:'140px'}}>
+    <div style={{ display: 'flex', gap: '45px', marginTop: '160px', justifyContent: 'center',marginBottom:'140px'}}>
       <div className="input-group" style={{boxShadow:'1px 1px 15px 0px #00000033',borderRadius:'0px 21px 21px 0px'}}>
-        <input value={name} onChange={(e) => setName(e.target.value)} type="text" className="form-control" aria-label="Text input with dropdown button" />
+        <input placeholder='Search' value={name} onChange={(e) => setName(e.target.value)} type="text" className="form-control" aria-label="Text input with dropdown button" />
         <div className="input-group-append">
           <Dropdown style={{backgroundColor:'#149CFF',borderRadius:'0px 21px 21px 0px'}}>
             <Dropdown.Toggle style={{color:'white',border:'none'}} variant="outline-secondary" id="dropdown-basic">

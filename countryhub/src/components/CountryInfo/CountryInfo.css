@@ -1,7 +1,9 @@
 .left-section {
     width: 1550px;
     padding-top:38px;
-    padding-left: 99px;
+    padding-left: 159px;
+    display: flex;
+    flex-direction: column;
 }
 
 .right-section {
@@ -19,9 +21,9 @@
 
 
 .text-row {
-    display: flex;
-    gap: 65px;
-    align-items: center;
+   display: flex;
+   align-items: center;
+   gap: 65px;
 
 }
 
@@ -32,6 +34,7 @@
 .small-title {
     color: #585858;
     font-size: 10px;
+    margin-left: 7px;
 }
 
 .prop {

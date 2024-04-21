@@ -7,9 +7,8 @@ function App() {
 
   return (
     <div>        
-      <header>
+      <header style={{ position: 'fixed', top: 0, width: '100%', zIndex: 1000 }}>
         <Header/>
-
       </header>
       
       <main>

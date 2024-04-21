@@ -1,11 +1,10 @@
 import Footer from "../Footer";
 import Header from "../Header";
-import { useNavigate,useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import maplogo from "../../assets/maplogo.png"
 import './CountryInfo.css'
 
 const CountryInfo = () => {
-  const navigate = useNavigate();
   const { state } = useLocation();
     return (
       <div>
@@ -13,7 +12,6 @@ const CountryInfo = () => {
         <div style={{display:'flex'}}>
 
 
-          {/* <button style={{height:'40px'}} className='searchButton' onClick={() => navigate("/")}>Back</button> */}
           <div className="left-section">
             <p className="big-title">Names:</p>
             
@@ -78,8 +76,8 @@ const CountryInfo = () => {
           </div>
 
           <div className="right-section">
-            <img src={state.flag} alt="" />
-            <img className="coatimage" src={state.coatOfArms} alt="" />
+            <img src={state.flag} alt="Flag" />
+            <img className="coatimage" src={state.coatOfArms} alt="Coat of Arms" />
             <a href={state.map}><img src={maplogo} alt="" /></a>
           </div>
 

@@ -1,9 +1,7 @@
-import React from 'react'
-
 const ErrorElement = () => {
     
   return (
-    <div style={{textAlign:'center'}}>
+    <div style={{textAlign:'center',height:'770px',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center'}}>
         <h1>
             404
         </h1>

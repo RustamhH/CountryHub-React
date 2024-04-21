@@ -20,7 +20,7 @@ const MainPage = () => {
  
   
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div style={{height:'770px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'25px'}}>Loading...</div>;
   }
   
   if (error) {
