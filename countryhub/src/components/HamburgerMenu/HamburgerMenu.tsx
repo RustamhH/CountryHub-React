@@ -5,21 +5,27 @@ import {Box}   from '@mui/material'
 import Slider from '@mui/material/Slider'
 import hamburger from "../../assets/hamburgermenu.png";
 import { useAppDispatch } from '../../utils/hooks';
-import { getAllCountries, getCountriesByIndependency, getCountriesByRegion } from '../../utils/actions';
+import { getAllCountries, getCountriesByIndependency, getCountriesByPopulation, getCountriesByRegion } from '../../utils/actions';
 import "./HamburgerMenu.css"
 
 
 function HamburgerMenu() {
+
+  const dispatch=useAppDispatch()
+
+
+
+  // Hamburger Menu Start
   const [show, setShow] = useState(false);
   
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   
+  // Hamburger Menu End
   
   
   
-  const dispatch=useAppDispatch()
-  
+  // Independency Filter Start
   
   const [selectedItem, setSelectedItem] = useState("All");
   const handleItemClick = (item:any) => {
@@ -32,7 +38,12 @@ function HamburgerMenu() {
     }
   };
 
+  // Independency Filter End
+
   
+
+  // Region Filter Start
+
   const options = [{name:'Europe'},{name:'Asia'},{name:'Africa'},{name:'Americas'},{name:'Oceania'}]
   
 
@@ -54,12 +65,19 @@ function HamburgerMenu() {
     dispatch(getCountriesByRegion(newList))
   };
   
-  const [sliderValue, setSliderValue] = useState([450, 1430000000]);
 
-  const handleChange = (event, newValue) => {
-    setSliderValue(newValue);
+  // Region Filter End
+
+
+
+  // Population Filter Start
+  const [sliderValue, setSliderValue] = useState<number[]>([0, 1500000000]);
+  const handleChange = (event: Event, newValue: number | number[]) => {
+    setSliderValue(newValue as number[]);
+    dispatch(getCountriesByPopulation(sliderValue))
+    
   };
-
+  // Population Filter End
 
   
 
@@ -113,14 +131,14 @@ function HamburgerMenu() {
             </div>
             <div className='population'>
               <p style={{fontSize:'20px'}}>Population</p>
-              <Box sx={{ width: 210 }}>
+              <Box sx={{ width: 214 }}>
                 <Slider
-                  min={450}
-                  max={1430000000}
+                  min={0}
+                  max={1500000000}
+                  getAriaLabel={() => 'Population'}
                   value={sliderValue}
                   onChange={handleChange}
                   valueLabelDisplay="auto"
-                  ariaLabel="Population"
                 />
               </Box>
               

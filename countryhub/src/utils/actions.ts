@@ -37,12 +37,10 @@ export const getCountriesByRegion = (options:string[]) => async (dispatch:AppDis
       const responseData=response.data
       result.push(...responseData)
     }
-    
     dispatch(fetchActions.Success(result))
 
   } catch (e: any) {
     dispatch(fetchActions.Error(e.messsage))
-    
   }
 }
 
@@ -54,6 +52,29 @@ export const getCountriesByIndependency = (status:string) => async (dispatch: Ap
     else if(status=='No') status='false'
     const response = await axios.get(`https://restcountries.com/v3.1/independent?status=${status}`);
     dispatch(fetchActions.Success(response.data))
+  } catch (e: any) {
+    dispatch(fetchActions.Error(e.messsage))
+  }
+}
+
+
+export const getCountriesByPopulation = (values:number[]) => async (dispatch:AppDispatch) => {
+  try{
+    
+    dispatch(fetchActions.Request());
+    
+    let unfilteredresult:object[]=[];
+    let result:object[]=[];
+    const response = await axios.get(`https://restcountries.com/v3.1/all`);
+    unfilteredresult=response.data;
+    unfilteredresult.forEach(country => {
+      if(country.population > values[0] && country.population<values[1]) {
+        result.push(country)
+      }
+    });
+
+    dispatch(fetchActions.Success(result))
+
   } catch (e: any) {
     dispatch(fetchActions.Error(e.messsage))
   }
